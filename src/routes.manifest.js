@@ -9,4 +9,9 @@ export const routeManifest = [
     component: "ExamplePage",
     label: "Example Page",
   },
+  {
+    path: "/travel-money",
+    component: "TravelMoneyPage",
+    label: "Travel Money",
+  },
 ];

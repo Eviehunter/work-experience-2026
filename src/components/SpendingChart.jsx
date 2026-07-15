@@ -14,7 +14,7 @@ const Label = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  color: ${({ theme }) => theme.colors.muted};
+  color: ${({ theme }) => theme.colors.blue900};
   font-weight: 700;
 `;
 

@@ -18,18 +18,17 @@ const Text = styled.div`
 const Eyebrow = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.green700};
-  font-size: 0.85rem;
+  font-size: 0.25rem;
   font-weight: 700;
   text-transform: uppercase;
 `;
 
 const Title = styled.h1`
   margin: 0;
-  color: ${({ theme }) => theme.colors.green900};
+  color: ${({ theme }) => theme.colors.blue900};
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.05;
 `;
-
 const Description = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.muted};

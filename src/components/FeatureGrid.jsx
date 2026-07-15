@@ -5,11 +5,13 @@ const Section = styled.section`
   display: grid;
   gap: 1rem;
   padding: 0 clamp(1rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
+  /* match TravelMoney heading color */
+  color: ${({ theme }) => theme.colors.blue900};
 `;
 
 const Heading = styled.h2`
   margin: 0;
-  color: ${({ theme }) => theme.colors.green900};
+  color: inherit;
 `;
 
 const Grid = styled.div`
@@ -24,14 +26,14 @@ const Grid = styled.div`
 
 const Text = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.muted};
+  color: inherit;
   line-height: 1.6;
 `;
 
 export function FeatureGrid({ features }) {
   return (
     <Section>
-      <Heading>Pick the features your bank should offer</Heading>
+      <Heading>Pick the currencies that you would like to use:</Heading>
       <Grid>
         {features.map((feature) => (
           <Card key={feature.title}>

@@ -18,7 +18,7 @@ const looks = {
 const Wrapper = styled.article`
   display: grid;
   gap: 1rem;
-  min-height: 190px;
+  min-height: 10px;
   border-radius: ${({ theme }) => theme.radii.md};
   padding: 1.2rem;
   box-shadow: ${({ theme }) => theme.shadow};

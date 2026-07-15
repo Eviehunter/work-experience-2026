@@ -12,17 +12,17 @@ const Wrapper = styled.article`
 
 const Label = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.muted};
+  color: ${({ theme }) => theme.colors.blue900};
   font-size: 0.9rem;
   font-weight: 700;
 `;
 
 const Value = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.green900};
+  color: ${({ theme }) => theme.colors.blue900};
   font-size: 2rem;
-  font-weight: 800;
-  line-height: 1;
+  font-weight: 500;
+  line-height: 0.1;
 `;
 
 const Helper = styled.p`

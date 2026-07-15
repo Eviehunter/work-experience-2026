@@ -17,6 +17,7 @@ const Brand = styled.div`
   align-items: center;
   gap: 0.6rem;
   font-weight: 800;
+  color: ${({ theme, $color }) => $color || theme.colors.green900};
 `;
 
 const Links = styled.nav`
@@ -29,22 +30,24 @@ const Links = styled.nav`
 `;
 
 const LinkText = styled.a`
-  color: ${({ theme }) => theme.colors.muted};
+  color: ${({ theme, $color }) => $color || theme.colors.muted};
   font-weight: 700;
   text-decoration: none;
 `;
 
-export function Navbar({ bankName, onDashboardClick }) {
+export function Navbar({ bankName, onDashboardClick, color }) {
   return (
     <Bar>
-      <Brand>
+      <Brand $color={color}>
         <Landmark size={24} />
         {bankName}
       </Brand>
       <Links aria-label="Main navigation">
-        <LinkText href="#accounts">Accounts</LinkText>
-        <LinkText href="#spending">Spending</LinkText>
-        <LinkText href="#transfer">Transfer</LinkText>
+        <LinkText $color={color} href="#accounts">Accounts</LinkText>
+        <LinkText $color={color} href="#spending">Spending</LinkText>
+        <LinkText $color={color} href="#transfer">Transfer</LinkText>
+        <LinkText $color={color} href="#Spending account">Spending Account</LinkText>
+        <LinkText $color={color} href="/travel-money">Travel Money</LinkText>
       </Links>
       <Button variant="secondary" onClick={onDashboardClick}>
         Dashboard

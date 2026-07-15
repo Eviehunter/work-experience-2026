@@ -22,12 +22,13 @@ const Track = styled.div`
 const Fill = styled.div`
   width: ${({ percent }) => percent}%;
   height: 100%;
-  background: ${({ theme }) => theme.colors.green500};
+  background: #0069fd; /* Modern Navy Blue */
 `;
+
 
 const HelpText = styled.p`
   margin: 0;
-  color: ${({ theme }) => theme.colors.muted};
+  color: ${({ theme }) => theme.colors.blue900};
 `;
 
 export function SavingsGoal({ name, saved, target }) {
