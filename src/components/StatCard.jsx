@@ -13,7 +13,7 @@ const Wrapper = styled.article`
 const Label = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.blue900};
-  font-size: 0.9rem;
+  font-size: ${({ fontSize }) => fontSize};
   font-weight: 700;
 `;
 
@@ -23,6 +23,7 @@ const Value = styled.p`
   font-size: 2rem;
   font-weight: 500;
   line-height: 0.1;
+  font-size: ${({ fontSize }) => fontSize};
 `;
 
 const Helper = styled.p`
@@ -43,11 +44,13 @@ export function StatCard({
   helperText,
   tone = "positive",
   elevated = false,
+  labelSize = "0.9rem",
+  valueSize= "2rem"
 }) {
   return (
     <Wrapper $elevated={elevated}>
-      <Label>{label}</Label>
-      <Value>{value}</Value>
+      <Label fontSize={labelSize}>{label}</Label>
+      <Value fontSize={valueSize}>{value}</Value>
       {helperText && <Helper $tone={tone}>{helperText}</Helper>}
     </Wrapper>
   );

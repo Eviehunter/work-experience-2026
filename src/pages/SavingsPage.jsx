@@ -12,7 +12,13 @@ export function SavingsPage() {
     <Navbar bankName="My Bank" onDashboardClick={() => {}} color={theme.colors.blue900} />
     <PageWrapper>
       <PageHeader title="My Savings Account"/>
-      <AccountCard name="Savings Balance:" balance={"£3000"} number="Account number:123456789"/>
+    
+      <AccountCard 
+      name="Savings Balance:" 
+      balance={"£3000"} 
+      number="Account number:123456789"
+  />
+
       <SavingsGoal name="Your savings goal" target={5000} saved={3000}/>
       <SpendingChart items={[
         { label: "Food", value: 30, color: "#FF6384" },
@@ -21,7 +27,15 @@ export function SavingsPage() {
         { label: "Utilities", value: 25, color: "#4BC0C0" },
       ]} />
 
-      <StatCard label="Highest consumption"  value="Food: £150"/>
+      <StatCard 
+      label="Highest consumption"  
+      labelSize="2rem"
+      value="Food: £150"
+      valueSize="1.5rem"
+      style={{
+    fontSize: "18px",
+  }}
+/>
     </PageWrapper>
   </Main>;
 }

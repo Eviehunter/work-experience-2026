@@ -18,7 +18,7 @@ export function HomePage() {
 
     <AccountCard 
           variant="midnight"
-          balance={1000}
+          balance="£1000"
     name="Current account"
        />
   <div
