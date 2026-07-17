@@ -31,7 +31,64 @@ const Fill = styled.div`
   background: ${({ color }) => color};
 `;
 
-export function SpendingChart({ items }) {
+const Pie = styled.div`
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: ${({ gradient }) => gradient};
+  box-shadow: inset 0 0 0 1px ${({ theme }) => theme.colors.border};
+`;
+
+const Legend = styled.div`
+  display: grid;
+  gap: 0.5rem;
+`;
+
+const LegendItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: ${({ theme }) => theme.colors.blue900};
+  font-weight: 600;
+`;
+
+const Swatch = styled.span`
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: ${({ color }) => color};
+`;
+
+export function SpendingChart({ items, variant = "bar" }) {
+  if (variant === "pie") {
+    const total = items.reduce((sum, item) => sum + item.value, 0);
+    let startAngle = 0;
+    const segments = items.map((item) => {
+      const angle = (item.value / total) * 360;
+      const segment = `${item.color} ${startAngle}deg ${startAngle + angle}deg`;
+      startAngle += angle;
+      return segment;
+    });
+
+    const gradient = `conic-gradient(${segments.join(", ")})`;
+
+    return (
+      <Chart>
+        <Pie gradient={gradient} />
+        <Legend>
+          {items.map((item) => (
+            <LegendItem key={item.label}>
+              <Swatch color={item.color} />
+              <span>
+                {item.label} ({item.value}%)
+              </span>
+            </LegendItem>
+          ))}
+        </Legend>
+      </Chart>
+    );
+  }
+
   return (
     <Chart>
       {items.map((item) => (
