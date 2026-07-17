@@ -5,13 +5,13 @@ const Section = styled.section`
   display: grid;
   gap: 1rem;
   padding: 0 clamp(1rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
-  /* match TravelMoney heading color */
-  color: ${({ theme }) => theme.colors.blue900};
+  color: #ffffff;
 `;
 
 const Heading = styled.h2`
   margin: 0;
   color: inherit;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 `;
 
 const Grid = styled.div`
@@ -26,7 +26,7 @@ const Grid = styled.div`
 
 const Text = styled.p`
   margin: 0;
-  color: inherit;
+  color: #0f2a4a;
   line-height: 1.6;
 `;
 
@@ -37,7 +37,7 @@ export function FeatureGrid({ features }) {
       <Grid>
         {features.map((feature) => (
           <Card key={feature.title}>
-            <h3>{feature.title}</h3>
+            <h3 style={{ color: "#0f2a4a" }}>{feature.title}</h3>
             <Text>{feature.text}</Text>
           </Card>
         ))}

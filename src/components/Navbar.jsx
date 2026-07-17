@@ -43,7 +43,9 @@ export function Navbar({ bankName, onDashboardClick, color }) {
         {bankName}
       </Brand>
       <Links aria-label="Main navigation">
-        <LinkText $color={color} href="#accounts">Accounts</LinkText>
+        <LinkText $color={color} href="/">
+          Home
+        </LinkText>
         <LinkText $color={color} href="#spending">Spending</LinkText>
         <LinkText $color={color} href="#transfer">Transfer</LinkText>
         <LinkText $color={color} href="/savings">Savings</LinkText>
