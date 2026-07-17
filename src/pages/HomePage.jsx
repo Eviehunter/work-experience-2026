@@ -19,7 +19,7 @@ export function HomePage() {
           Welcome,
         </h1>
 
-        <AccountCard variant="midnight" balance={1000} name="Current account" />
+        <AccountCard variant="midnight" balance={"£1000"} name="Current account" />
 
         <div
           style={{
