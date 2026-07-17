@@ -47,7 +47,7 @@ export function Navbar({ bankName, onDashboardClick, color }) {
           Home
         </LinkText>
         <LinkText $color={color} href="#spending">Spending</LinkText>
-        <LinkText $color={color} href="#transfer">Transfer</LinkText>
+        <LinkText $color={color} href="/transfer">Transfer</LinkText>
         <LinkText $color={color} href="/savings">Savings</LinkText>
         <LinkText $color={color} href="/travel-money">Travel Money</LinkText>
       </Links>

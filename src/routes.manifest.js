@@ -19,5 +19,9 @@ export const routeManifest = [
     component: "SavingsPage",
     label: "Savings",
   },
-  
+   {
+    path: "/transfer",
+    component: "TransferPage",
+    label: "Transfer",
+  },
 ];
