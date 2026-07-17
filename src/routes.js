@@ -1,10 +1,11 @@
-import { ExamplePage, TravelMoneyPage, SavingsPage, HomePage, TransferPage} from "./pages";
+import { ExamplePage, TravelMoneyPage, SavingsPage, HomePage, TransferPage, SpendingsPage} from "./pages";
 import { routeManifest } from "./routes.manifest";
 
 const routeComponents = {
   ExamplePage,
   TravelMoneyPage,
   SavingsPage,
+  SpendingsPage,
   HomePage,
   TransferPage
 };

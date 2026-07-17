@@ -40,13 +40,13 @@ export function Navbar({ bankName, onDashboardClick, color }) {
     <Bar>
       <Brand $color={color}>
         <Landmark size={24} />
-        {bankName}
+        Error404 Bank
       </Brand>
       <Links aria-label="Main navigation">
         <LinkText $color={color} href="/">
           Home
         </LinkText>
-        <LinkText $color={color} href="#spending">Spending</LinkText>
+        <LinkText $color={color} href="/spending">Spending</LinkText>
         <LinkText $color={color} href="/transfer">Transfer</LinkText>
         <LinkText $color={color} href="/savings">Savings</LinkText>
         <LinkText $color={color} href="/travel-money">Travel Money</LinkText>
