@@ -32,7 +32,7 @@ const Wrapper = styled.article`
 const TopLine = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.0rem;
 
   position: relative;
 `;
@@ -40,9 +40,9 @@ const TopLine = styled.div`
 const Balance = styled.strong`
   position: absolute;
   right: 1.2rem;
-  bottom: 1.2rem;
+  bottom: -0.1rem;
 
-  font-size: 2rem;
+  font-size: 1.8rem;
 `;
 
 const Muted = styled.span`
